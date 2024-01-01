@@ -6,6 +6,7 @@ Based on the [Electron React Boilerplate](https://github.com/electron-react-boil
 
 [![Build Status][github-actions-status]][github-actions-url]
 [![Github Tag][github-tag-image]][github-tag-url]
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flacymorrow%2Felectron-shadcn-boilerplate.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Flacymorrow%2Felectron-shadcn-boilerplate?ref=badge_shield)
 
 </div>
 
@@ -25,3 +26,6 @@ MIT © [Lacy Morrow](https://github.com/lacymorrow)
 [github-tag-url]: https://github.com/lacymorrow/electron-shadcn-boilerplate/releases/latest
 [stackoverflow-img]: https://img.shields.io/badge/stackoverflow-electron_react_boilerplate-blue.svg
 [stackoverflow-url]: https://stackoverflow.com/questions/tagged/electron-react-boilerplate
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Flacymorrow%2Felectron-shadcn-boilerplate.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Flacymorrow%2Felectron-shadcn-boilerplate?ref=badge_large)
