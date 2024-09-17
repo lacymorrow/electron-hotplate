@@ -14,8 +14,8 @@ Todo:
 
 import { app } from 'electron';
 import Logger from 'electron-log/main';
+import path from 'path';
 import { $errors, $init } from '../config/strings';
-
 import ipc from './ipc';
 import { ready, startup } from './startup';
 
@@ -36,6 +36,12 @@ app
 
 // LAUNCH THE APP
 startup();
+
+// Fix the icon loading issue
+const iconPath = path.join(__dirname, '..', '..', 'assets', 'icons', 'icon.ico');
+app.whenReady().then(() => {
+  // Set the app icon here
+});
 
 // See the idle() function in src/main/startup.ts
 // it's called in the ipcMain.on(ipcChannels.RENDERER_READY) listener

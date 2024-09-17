@@ -5,7 +5,6 @@ import { Menu } from '@/renderer/components/menu/Menu';
 import { useGlobalContext } from '@/renderer/context/global-context';
 
 import React from 'react';
-import { IsOnlineContextProvider } from 'react-is-online-context';
 import { Outlet } from 'react-router-dom';
 
 // We can't use the ScrollArea here or the scroll will persist between navigations
@@ -24,9 +23,7 @@ export function MainLayout({ children }: { children?: React.ReactNode }) {
 				<div className="grow min-w-0">{children || <Outlet />}</div>
 			</div>
 			<Footer>
-				<IsOnlineContextProvider>
-					<OnlineStatus />
-				</IsOnlineContextProvider>
+				<OnlineStatus />
 				<AppStatus />
 			</Footer>
 		</div>

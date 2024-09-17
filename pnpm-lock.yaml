@@ -80,6 +80,9 @@ importers:
       '@tailwindcss/container-queries':
         specifier: ^0.1.1
         version: 0.1.1(tailwindcss@3.4.11(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2)))
+      '@uidotdev/usehooks':
+        specifier: ^2.4.1
+        version: 2.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@uiw/react-color-chrome':
         specifier: ^2.3.0
         version: 2.3.0(@babel/runtime@7.25.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2550,6 +2553,13 @@ packages:
   '@typescript-eslint/visitor-keys@8.6.0':
     resolution: {integrity: sha512-wapVFfZg9H0qOYh4grNVQiMklJGluQrOUiOhYRrQWhx7BY/+I1IYb8BczWNbbUpO+pqy0rDciv3lQH5E1bCLrg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@uidotdev/usehooks@2.4.1':
+    resolution: {integrity: sha512-1I+RwWyS+kdv3Mv0Vmc+p0dPYH0DTRAo04HLyXReYBL9AeseDWUJyi4THuksBJcu9F0Pih69Ak150VDnqbVnXg==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
 
   '@uiw/color-convert@2.3.0':
     resolution: {integrity: sha512-cBkJ6L2vgHlrAnM6XkeLAusOXxl2b+5HsX1URhCSmBzJSshM50hW096kY7ItS5B3CffabZr7Y2+NbJiCWfdaSw==}
@@ -10512,6 +10522,11 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.6.0
       eslint-visitor-keys: 3.4.3
+
+  '@uidotdev/usehooks@2.4.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@uiw/color-convert@2.3.0(@babel/runtime@7.25.6)':
     dependencies:

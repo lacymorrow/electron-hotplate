@@ -48,13 +48,13 @@ A batteries-included Electron boilerplate with React, TypeScript, and more. Base
 3. Install dependencies
 
    ```bash
-   yarn
+   npm install
    ```
 
 4. Start the development server
 
    ```bash
-   yarn start
+   npm run start
    ```
 
 ## 📁 Project Structure
@@ -66,10 +66,10 @@ A batteries-included Electron boilerplate with React, TypeScript, and more. Base
 
 ## 📜 Available Scripts
 
-- `yarn start`: Start the app in development mode
-- `yarn build`: Build the app for production
-- `yarn lint`: Run the linter
-- `yarn test`: Run tests
+- `npm run start`: Start the app in development mode
+- `npm run package`: Build the app for production
+- `npm run lint`: Run the linter
+- `npm run test`: Run tests
 
 ## Production
 
@@ -102,11 +102,15 @@ Some Tailwind plugins have been added for convenience:
 ### Shadcn
 
 Shadcn is a UI component library for React. See the [Shadcn docs](https://ui.shadcn.com/) for more information.
-Use `npx shadcn-ui@latest add accordion ...` to add a component to your project.
+Use `npx shadcn@latest add button ...` to add a component to your project.
 
 _Current installation command (to update all ui components):_
 
-# Electron Hotplate
+```sh
+npx shadcn@latest add button checkbox dropdown-menu form input menubar radio-group scroll-area select separator sonner switch textarea
+```
+
+_To list components with updates: `npx shadcn@latest diff`_
 
 Based on the [Electron React Boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate), this boilerplate adds UI components from [Shadcn](https://ui.shadcn.com/), styling with [Tailwind CSS](https://tailwindcss.com/), persistance with [electron-store](https://github.com/sindresorhus/electron-store), and a structured [React](https://react.dev/) context that promotes a data flow from the top down: Main process -> Renderer process.
 
@@ -190,6 +194,17 @@ npx shadcn-ui@latest add button checkbox dropdown-menu form input menubar radio-
 ```
 
 _To list components with updates: `npx shadcn-ui@latest diff`_
+
+### Build for production
+
+```sh
+npm run package
+```
+
+#### Important Notes
+
+- The `src/main/auto-update.ts` file is where the auto-updater is configured. Uncomment the `update` function to enable auto-update after publishing your first version.
+- The app icon will **ALWAYS** be the default Electron icon in development. You will need to build the app with `npm run package` to get a new icon.
 
 ## 🤝 Contributing
 

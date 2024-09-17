@@ -16,6 +16,7 @@ jobs:
 
     strategy:
       matrix:
+        # TODO: Add windows and linux to the matrix, We only use one right now to prevent publishing more than once
         os: [macos-latest]
 
     steps:
