@@ -1,4 +1,3 @@
-import { ipcRenderer } from 'electron';
 import React, { useEffect, useState } from 'react';
 
 // Component for the main window of the Electron Hotplate demo
@@ -7,19 +6,19 @@ const MainApp: React.FC = () => {
 
 	useEffect(() => {
 		// Listen for messages from child windows
-		ipcRenderer.on('child-window-message', (_, data) => {
-			setMessage(data);
+		window.electron.ipcRenderer.on('child-window-message', (_, data) => {
+			setMessage(String(data));
 		});
 
 		// Cleanup listener on component unmount
 		return () => {
-			ipcRenderer.removeAllListeners('child-window-message');
+			window.electron.ipcRenderer.removeAllListeners('child-window-message');
 		};
 	}, []);
 
 	// Handler to open a new child window
 	const openChildWindow = () => {
-		ipcRenderer.send('open-child-window');
+		window.electron.ipcRenderer.send('open-child-window');
 	};
 
 	return (

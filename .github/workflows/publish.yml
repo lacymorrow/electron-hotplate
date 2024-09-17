@@ -10,7 +10,7 @@ jobs:
     # To enable auto publishing to github, update your electron publisher
     # config in package.json > "build" and remove the conditional below
     # MAKE SURE TO REMOVE THE EXCLAMATION MARK FROM THE OWNER NAME BELOW
-    if: ${{ github.repository_owner == 'lacymorrow!' }}
+    if: ${{ github.repository_owner == 'lacymorrow' }}
 
     runs-on: ${{ matrix.os }}
 

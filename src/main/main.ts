@@ -5,8 +5,6 @@ Todo:
 - Allow disabling of the inputs
 - Debounce Slider/color picker input
 - sass
-- Homepage
-- Documentation
 */
 
 // TODO: ERROR
