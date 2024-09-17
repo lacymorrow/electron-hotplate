@@ -7,7 +7,7 @@ import { useIsOnline } from 'react-is-online-context';
 const twclasses = 'w-4 h-4 inline-block -mt-1 mr-1';
 
 function OnlineStatus() {
-	const { isOnline, isLoading, error } = useIsOnline();
+	const { isOnline, isLoading, error } = useIsOnline(); // TODO: useIsOnline crashes if blocked
 
 	return (
 		<div>

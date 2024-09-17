@@ -106,13 +106,13 @@ export function GlobalContextProvider({
 				setAppInfo(info);
 				return info;
 			})
-			.then(({ paths }) => {
+			.then(() => {
 				// SOUNDS
-				preload(paths.sounds);
+				preload();
 
 				// Setup listener to play sounds
 				window.electron.ipcRenderer.on(ipcChannels.PLAY_SOUND, (sound: any) => {
-					play({ name: sound, path: paths.sounds });
+					play({ name: sound });
 				});
 			})
 			.catch(console.error);

@@ -11,13 +11,13 @@ import path from 'path';
 import { APP_FRAME, APP_HEIGHT, APP_WIDTH } from '../config/config';
 import { setupContextMenu } from './context-menu';
 import MenuBuilder from './menu';
-import { __resources } from './paths';
+import { __assets } from './paths';
 import { getSetting } from './store-actions';
 import { is, resolveHtmlPath } from './util';
 import windows from './windows';
 
 const getAssetPath = (...paths: string[]): string => {
-	return path.join(__resources, ...paths);
+	return path.join(__assets, ...paths);
 };
 
 const createWindow = (opts?: BrowserWindowConstructorOptions) => {

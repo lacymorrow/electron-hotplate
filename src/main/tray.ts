@@ -1,6 +1,6 @@
 import { app, Tray as ElectronTray, Menu } from 'electron';
 import path from 'path';
-import { __resources } from './paths';
+import { __assets } from './paths';
 import { is } from './util';
 import windows from './windows';
 
@@ -19,7 +19,7 @@ const systemIcon = () => {
 };
 
 const getIconPath = () => {
-	return path.join(__resources, 'icons', systemIcon());
+	return path.join(__assets, 'icons', systemIcon());
 };
 
 const initialize = () => {

@@ -96,3 +96,13 @@ export const idle = async () => {
 	Logger.status($init.idle);
 	console.timeLog(app.name, $init.idle);
 };
+
+process.on('uncaughtException', (error) => {
+	Logger.error('Uncaught exception:', error);
+	// Optionally, you can show an error dialog to the user here
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+	Logger.error('Unhandled rejection at:', promise, 'reason:', reason);
+	// Optionally, you can show an error dialog to the user here
+});
