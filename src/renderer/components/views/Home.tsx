@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PROTOCOL } from '@/config/config';
-import logo from '@/renderer/assets/logo.png';
 import { nav } from '@/renderer/config/nav';
 import { useGlobalContext } from '@/renderer/context/global-context';
 import styles from '@/renderer/styles/CssModuleExample.module.scss';
@@ -17,7 +16,6 @@ export function Home() {
 
 	return (
 		<div className="container mx-auto p-6 space-y-6">
-			<img src={logo} alt="logo" />
 			<img src={`${PROTOCOL}://icon.png`} alt="logo" />
 			<h1 className="text-3xl font-bold">Welcome to Electron Hotplate</h1>
 			<p className="text-muted-foreground">

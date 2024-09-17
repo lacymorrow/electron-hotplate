@@ -39,6 +39,8 @@ export const startup = () => {
 	// Enable electron debug and source map support
 	debugging.initialize();
 
+	// protocol.register();
+
 	// App CLI flags
 	appFlags.initialize();
 

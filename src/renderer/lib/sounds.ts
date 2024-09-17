@@ -39,7 +39,7 @@ const sounds: Record<string, { url: string; volume: number }> = {
 };
 
 export const preload = (basepath = '') => {
-	console.warn(`Preloading sounds from ${basepath}`);
+	console.warn(`Preloading sounds`);
 
 	let audio: HTMLAudioElement | undefined;
 	Object.keys(sounds).forEach((name) => {
@@ -48,11 +48,10 @@ export const preload = (basepath = '') => {
 			const url = `${PROTOCOL}://${basepath}${sound.url}`;
 			console.warn(`Preloading sound: ${name}, URL: ${url}`);
 
-			const audio = new window.Audio(url);
+			cache[name] = new window.Audio(url);
+
+			audio = cache[name];
 			audio.volume = sound.volume;
-			// audio.src = `${PROTOCOL}://${basepath}${sound.url}`; // this requires web security to be disabled
-			
-			cache[name] = audio;
 		}
 	});
 
