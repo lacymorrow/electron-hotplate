@@ -21,6 +21,9 @@ import windows from './windows';
 export const startup = () => {
 	console.timeLog(app.name, $init.startup);
 
+	// App CLI flags
+	appFlags.initialize();
+
 	// Initialize logger
 	logger.initialize();
 
@@ -39,10 +42,7 @@ export const startup = () => {
 	// Enable electron debug and source map support
 	debugging.initialize();
 
-	// protocol.register();
-
-	// App CLI flags
-	appFlags.initialize();
+	protocol.register();
 
 	// Register app listeners, e.g. `app.on()`
 	appListeners.register();
@@ -62,6 +62,9 @@ export const ready = async () => {
 		await debugging.installExtensions();
 	}
 
+	// Register custom protocol like `app://`
+	protocol.initialize();
+
 	// Add remaining app listeners
 	appListeners.ready();
 
@@ -76,9 +79,6 @@ export const ready = async () => {
 
 	// Setup Tray
 	tray.initialize();
-
-	// Register custom protocol like `app://`
-	protocol.initialize();
 
 	// Auto updates
 	// eslint-disable-next-line no-new

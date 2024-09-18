@@ -48,10 +48,11 @@ export const preload = (basepath = '') => {
 			const url = `${PROTOCOL}://${basepath}${sound.url}`;
 			console.warn(`Preloading sound: ${name}, URL: ${url}`);
 
-			cache[name] = new window.Audio(url);
-
+			cache[name] = new window.Audio();
+			cache[name].crossOrigin = '*';
+			cache[name].volume = sound.volume;
+			cache[name].src = url;
 			audio = cache[name];
-			audio.volume = sound.volume;
 		}
 	});
 
