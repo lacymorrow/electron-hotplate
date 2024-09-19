@@ -16,7 +16,12 @@ export function Home() {
 
 	return (
 		<div className="container mx-auto p-6 space-y-6">
-			<img src={`${PROTOCOL}://icon.png`} alt="logo" />
+			<img
+				className="max-w-xs mx-auto"
+				src={`${PROTOCOL}://icon.png`}
+				alt="logo"
+			/>
+
 			<h1 className="text-3xl font-bold">Welcome to Electron Hotplate</h1>
 			<p className="text-muted-foreground">
 				A professional boilerplate for building cross-platform Electron

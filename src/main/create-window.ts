@@ -57,7 +57,7 @@ const createWindow = (opts?: BrowserWindowConstructorOptions) => {
 	};
 
 	options.webPreferences = {
-		webSecurity: !is.development, // Required for loading sounds, comment out if not using sounds
+		// webSecurity: false,
 		// Prevent throttling when the window is in the background:
 		// backgroundThrottling: false,
 		// Disable the `auxclick` feature so that `click` events are triggered in

@@ -20,7 +20,9 @@ export function MainLayout({ children }: { children?: React.ReactNode }) {
 			`}</style>
 			<Menu className="shrink-0" />
 			<div className="border-t grow flex min-h-0">
-				<div className="grow min-w-0">{children || <Outlet />}</div>
+				<div className="grow min-w-0 overflow-y-auto">
+					{children || <Outlet />}
+				</div>
 			</div>
 			<Footer>
 				<OnlineStatus />
